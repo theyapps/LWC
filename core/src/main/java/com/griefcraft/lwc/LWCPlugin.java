@@ -190,7 +190,7 @@ public class LWCPlugin extends JavaPlugin {
     }
 
     public void onEnable() {
-        preload();
+        //preload();
         lwc = new LWC(this);
 
         LWCInfo.setVersion(getDescription().getVersion());
@@ -285,11 +285,11 @@ public class LWCPlugin extends JavaPlugin {
         updater = new Updater();
 
         // Set the SQLite native library path
-        String nativeLibraryFolder = updater.getOSSpecificFolder();
-
-        if (nativeLibraryFolder != null) {
-            System.setProperty("org.sqlite.lib.path", nativeLibraryFolder);
-        }
+        // String nativeLibraryFolder = updater.getOSSpecificFolder();
+        //
+        // if (nativeLibraryFolder != null) {
+        //     System.setProperty("org.sqlite.lib.path", nativeLibraryFolder);
+        // }
     }
 
     /**

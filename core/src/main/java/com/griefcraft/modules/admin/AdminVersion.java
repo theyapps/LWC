@@ -64,7 +64,7 @@ public class AdminVersion extends JavaModule {
         // force a reload of the latest versions
         String pluginColor = Colors.Green;
         Version currVersion = LWCInfo.FULL_VERSION;
-        Version latestVersion = updater.getLatestVersion();
+        Version latestVersion = updater != null ? updater.getLatestVersion() : new Version("unknown");
 
         if (latestVersion.newerThan(currVersion)) {
             pluginColor = Colors.Red;
